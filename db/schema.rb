@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140629162817) do
   create_table "expenses", force: true do |t|
     t.date     "date"
     t.text     "category"
-    t.decimal  "amount"
+    t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

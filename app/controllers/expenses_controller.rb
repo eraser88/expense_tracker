@@ -1,5 +1,5 @@
-class ExpenseController < ApplicationController
-  def edit
+class ExpensesController < ApplicationController
+  def new
   end
   def create
     @expense = Expense.new(params.require(:expense).permit(:date,:category,:amount))

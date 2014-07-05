@@ -9,29 +9,29 @@
 
 <div class="page-content inset">
 
-  <%= form_for :expense, html: {class: 'navbar-form navbar-left'} do |expense| %>
+  <%= form_for :expense, url: expenses_path, html: {class: 'navbar-form navbar-left'} do |f| %>
 
       <div class="col-md-7 input-group">
         <span class="input-group-addon">Date</span>
-        <%= expense.text_field :date, class: 'form-control' %>
+        <%= f.text_field :date, class: 'form-control' %>
       </div>
       <div class="col-md-7 row"></div>
 
 
       <div class="col-md-7 input-group">
         <span class="input-group-addon">Category</span>
-        <%= expense.text_field :category, class: 'form-control' %>
+        <%= f.text_field :category, class: 'form-control' %>
       </div>
       <div class="col-md-7 row"></div>
 
       <div class="col-md-7 input-group">
         <span class="input-group-addon">Amount</span>
-        <%= expense.text_field :amount, class: 'form-control' %>
+        <%= f.text_field :amount, class: 'form-control' %>
       </div>
       <div class="col-md-7 row"></div>
 
       <div class="col-md-7 input-group"></div>
-      <%= expense.submit class: 'btn btn-default', value: 'Submit Expense' %>
+      <%= f.submit class: 'btn btn-default', value: 'Submit Expense' %>
 
   <% end %>
 

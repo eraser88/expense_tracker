@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function () {
+    $('#wrapper').on('click', '#expense_date', function () {
+        $('#expense_date').datepicker("show");
+    })
+});

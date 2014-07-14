@@ -3,6 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ () ->
-  $('#wrapper').on('click', '#expense_date',  () ->
-    $('#expense_date').datepicker("show")
+  $('#wrapper').on('click', '#datepicker',  () ->
+    $('#datepicker').datepicker()
+  )
+
+  $('#expense_form').submit( () ->
+    if _.isEmpty($('#expense_date').val())
+      false
+    if _.isEmpty($('#expense_amount').val())
+      false
   )

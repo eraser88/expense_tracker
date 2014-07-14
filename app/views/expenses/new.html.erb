@@ -9,11 +9,11 @@
 
 <div class="page-content inset">
 
-  <%= form_for :expense, url: expenses_path, html: {class: 'navbar-form navbar-left'} do |f| %>
+  <%= form_for :expense, url: expenses_path, html: {id: 'expense_form',class: 'navbar-form navbar-left'} do |f| %>
 
       <div class="col-md-7 input-group">
         <span class="input-group-addon">Date</span>
-        <%= f.text_field :date, class: 'form-control', 'data-date-format' => 'yyyy/mm/dd' %>
+        <%= f.text_field :date, {class: 'form-control datepicker', id: 'datepicker', 'data-date-format' => 'yyyy/mm/dd'} %>
       </div>
 
 

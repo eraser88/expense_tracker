@@ -1,3 +1,30 @@
 // Place all the styles related to the Expense controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.expense-table {
+  width: 80%;
+  .change{
+    display: none;
+    margin-left: 15px;
+    color: #5cb85c;
+  }
+  tr:hover .change{
+    display: inline-block;
+  }
+
+  .delete{
+    color: #0088cc;
+  }
+
+  tr:hover .table-header {
+    color: #080808 !important;
+  }
+
+  .hover{
+    background-color: #67b168;;
+  }
+}
+
+#submit-expenses{
+
+}

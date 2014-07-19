@@ -12,6 +12,10 @@
     display: inline-block;
   }
 
+  tr:hover > th  {
+    color: #080808 !important;
+  }
+
   .delete {
     color: #0088cc;
   }
@@ -20,7 +24,10 @@
   {
     color: #080808 !important;
   }
-
+  .header
+  {
+    color: #080808 !important;
+  }
 }
 
 #submit-expenses{

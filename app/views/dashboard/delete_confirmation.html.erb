@@ -1,0 +1,19 @@
+<div class="modal fade confirmation" id="deleteModal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Delete Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure about removing the expense?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <%= link_to '<button class="btn btn-default">Yes</button>'.html_safe, expense_path(expense), method: :delete%>
+
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div><!-- /.modal -->

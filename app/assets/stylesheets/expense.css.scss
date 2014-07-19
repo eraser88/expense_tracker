@@ -3,26 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .expense-table {
   width: 80%;
-  .change{
+  .change {
     display: none;
-    margin-left: 15px;
+    margin-left: 7px;
     color: #5cb85c;
   }
-  tr:hover .change{
+  tr:hover .change {
     display: inline-block;
   }
 
-  .delete{
+  .delete {
     color: #0088cc;
   }
 
-  tr:hover .table-header {
+  .confirmation
+  {
     color: #080808 !important;
   }
 
-  .hover{
-    background-color: #67b168;;
-  }
 }
 
 #submit-expenses{

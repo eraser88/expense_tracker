@@ -12,26 +12,27 @@
       <div class="col-md-12">
         <p class="lead">Your expenses are displayed below.</p>
       </div>
-      <table class="table table-striped table-hover table-responsive expense-table">
-        <tr class = "table-header">
+      <table class="table table-striped table-responsive expense-table">
+        <tr class="table-header">
           <th>Date</th>
           <th>Category</th>
           <th>Amount (INR)</th>
         </tr>
-
+        <tbody class="table-hover">
         <% @expenses.each do |expense| %>
-            <tr >
+            <tr>
               <td><%= expense.date %></td>
               <td><%= expense.category %></td>
-              <td><%= expense.amount %> <%= link_to '<i class="glyphicon glyphicon-edit change"></i>'.html_safe, edit_expense_path(expense) %>
-               <%= link_to '<i class="glyphicon glyphicon-trash change delete"></i>'.html_safe, expense_path(expense), method: :delete %></td>
-        </td>
-        </tr>
+              <td><%= expense.amount %>
+                <%= render :template => 'dashboard/delete_confirmation', locals: {expense: expense} %>
+                <%= link_to '<i class="glyphicon glyphicon-edit change"></i>'.html_safe, edit_expense_path(expense) %>
+
+                    <i class="glyphicon glyphicon-trash change delete" id=delete_expense_<%=expense.id%> ></i>
+              </td>
+            </tr>
         <% end %>
+       </tbody>
       </table>
     </div>
   </div>
 </div>
-
-
-
